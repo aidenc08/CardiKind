@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CardiKind | Empowering Heart Health</title>
-  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
   <script>
@@ -32,120 +32,171 @@
 </head>
 <body class="bg-softgray text-gray-900 font-sans">
 
-  <!-- Navigation -->
-  <header class="flex items-center justify-between px-6 py-4 bg-white shadow">
-    <div class="flex items-center space-x-4">
-      <img src="images/logo.png" alt="CardiKind Logo" class="h-14 w-auto" />
-    </div>
-    <nav class="space-x-4 text-md font-medium flex items-center font-heading">
-      <a href="about.html" class="hover:text-primary">About</a>
-      <a href="events.html" class="hover:text-primary">Events</a>
-      <a href="resources.html" class="hover:text-primary">Resources</a>
-      <a href="blogs.html" class="hover:text-primary">Blog</a>
-      <a href="#contact" class="ml-4 bg-primary text-white px-4 py-2 rounded shadow hover:bg-orange-600 transition">Get Involved</a>
-    </nav>
-  </header>
+<!-- Header Include -->
+<div id="header-placeholder" class="min-h-[80px]"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
 
-  <!-- Hero Section -->
-  <section class="bg-orange-100 px-6 py-20 text-center md:text-left grid md:grid-cols-2 gap-8 items-center">
+<!-- Hero Section -->
+<section class="bg-orange-100 px-6 py-20 text-center md:text-left grid md:grid-cols-2 gap-8 items-center">
+  <div>
+    <h1 class="text-5xl font-heading text-primary font-bold mb-6">Empowering Communities<br /> Through Heart Health</h1>
+    <p class="text-lg text-gray-800 mb-6">CardiKind raises awareness, educates the public, and connects communities affected by heart disease through compassionate action and impactful programs.</p>
+    <a href="#impact" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">See Our Impact</a>
+  </div>
+  <div>
+    <img src="https://via.placeholder.com/500x400?text=Hero+Image" alt="Hero visual" class="rounded-lg shadow-lg mx-auto" />
+  </div>
+</section>
+
+<!-- Mission Section -->
+<section class="bg-white py-20 px-6 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-primary font-heading mb-6">Our Mission</h2>
+    <p class="text-lg text-gray-700 mb-10">To reduce the impact of heart disease by promoting healthy living, offering accessible resources, and fostering supportive communities globally.</p>
+    <img src="https://via.placeholder.com/800x300?text=Mission+Image" alt="Mission visual" class="mx-auto rounded-lg shadow" />
+  </div>
+</section>
+
+<!-- Our Impact Section -->
+<section id="impact" class="py-20 px-6 text-center bg-orange-50 text-gray-900">
+  <h2 class="text-3xl font-bold text-primary mb-10 font-heading">Our Global Impact</h2>
+  <div class="grid gap-10 md:grid-cols-4 max-w-6xl mx-auto">
     <div>
-      <h1 class="text-5xl font-heading text-primary font-bold mb-6">Empowering Communities<br /> Through Heart Health</h1>
-      <p class="text-lg text-gray-800 mb-6">CardiKind raises awareness, educates the public, and connects communities affected by heart disease through compassionate action and impactful programs.</p>
-      <a href="#impact" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">See Our Impact</a>
+      <h3 class="text-5xl font-bold text-orange-600 animate-count" data-count="5400">$0+</h3>
+      <p class="mt-2 text-gray-700">Raised for awareness efforts</p>
     </div>
     <div>
-      <img src="https://via.placeholder.com/500x400?text=Hero+Image" alt="Hero visual" class="rounded-lg shadow-lg mx-auto" />
+      <h3 class="text-5xl font-bold text-teal-600 animate-count" data-count="21000">0+</h3>
+      <p class="mt-2 text-gray-700">People Reached</p>
     </div>
-  </section>
-
-  <!-- Mission Section -->
-  <section class="bg-white py-20 px-6 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-primary font-heading mb-6">Our Mission</h2>
-      <p class="text-lg text-gray-700 mb-10">To reduce the impact of heart disease by promoting healthy living, offering accessible resources, and fostering supportive communities globally.</p>
-      <img src="https://via.placeholder.com/800x300?text=Mission+Image" alt="Mission visual" class="mx-auto rounded-lg shadow" />
+    <div>
+      <h3 class="text-5xl font-bold text-blue-600 animate-count" data-count="11">0</h3>
+      <p class="mt-2 text-gray-700">Countries Impacted</p>
     </div>
-  </section>
-
-  <!-- Our Impact Section -->
-  <section id="impact" class="py-20 px-6 text-center bg-orange-50 text-gray-900">
-    <h2 class="text-3xl font-bold text-primary mb-10 font-heading">Our Global Impact</h2>
-    <div class="grid gap-10 md:grid-cols-4 max-w-6xl mx-auto">
-      <div>
-        <h3 class="text-5xl font-bold text-orange-600 animate-count" data-count="500000">$0</h3>
-        <p class="mt-2 text-gray-700">Raised for awareness efforts</p>
-      </div>
-      <div>
-        <h3 class="text-5xl font-bold text-teal-600 animate-count" data-count="1000000">0</h3>
-        <p class="mt-2 text-gray-700">People Reached</p>
-      </div>
-      <div>
-        <h3 class="text-5xl font-bold text-blue-600 animate-count" data-count="35">0</h3>
-        <p class="mt-2 text-gray-700">Countries Impacted</p>
-      </div>
-      <div>
-        <h3 class="text-5xl font-bold text-pink-600 animate-count" data-count="250">0</h3>
-        <p class="mt-2 text-gray-700">Volunteers Mobilized</p>
-      </div>
+    <div>
+      <h3 class="text-5xl font-bold text-pink-600 animate-count" data-count="8">0</h3>
+      <p class="mt-2 text-gray-700">Months Active</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Featured Section -->
-  <section class="bg-white py-20 px-6">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <img src="https://via.placeholder.com/500x350?text=Programs+Image" alt="Program preview" class="rounded-lg shadow" />
-      </div>
-      <div>
-        <h2 class="text-3xl font-heading text-primary font-bold mb-4">Programs That Change Lives</h2>
-        <p class="text-lg text-gray-700 mb-6">From local health screenings to international education campaigns, our programs are designed to meet people where they are—physically and emotionally.</p>
-        <a href="resources.html" class="text-primary font-semibold hover:underline">Learn more →</a>
-      </div>
-    </div>
-  </section>
+<!-- Upcoming Events Stub -->
+<section class="bg-white py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-heading text-primary font-bold mb-6">Upcoming Events</h2>
+    <p class="text-lg text-gray-700 mb-10">Join us at one of our upcoming heart health events near you.</p>
+    <div id="homeUpcomingEvents" class="space-y-8 max-w-3xl mx-auto"></div>
+    <a href="events.html" class="mt-6 inline-block text-primary font-semibold hover:underline">View All Events →</a>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 px-6 bg-lightgray text-center border-t border-gray-300">
-    <h2 class="text-3xl font-heading font-bold text-gray-800 mb-4">Join Our Mission</h2>
-    <p class="text-lg text-gray-700 mb-6">We’re always looking for volunteers, partners, and heart health advocates to support our cause.</p>
-    <a href="mailto:info@cardikind.org" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">Contact Us</a>
-  </section>
+<!-- Blog Stub -->
+<section class="bg-softgray py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-heading text-primary font-bold mb-6">From the Blog</h2>
+    <p class="text-lg text-gray-700 mb-10">Insights, research, and community stories about heart health.</p>
+    <div id="homeBlogContainer" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"></div>
+    <a href="blogs.html" class="mt-6 inline-block text-primary font-semibold hover:underline">Read More Posts →</a>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="bg-lightgray text-gray-600 py-6 text-center text-sm">
-    <p>&copy; 2025 CardiKind. All rights reserved.</p>
-  </footer>
+<!-- Footer Include -->
+<div id="footer-placeholder" class="min-h-[200px]"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
 
-  <!-- Impact Animation Script -->
-  <script>
-    const counters = document.querySelectorAll('[data-count]');
-    let animated = false;
-
-    function animateCounts() {
-      if (animated) return;
-      const section = document.querySelector('#impact');
-      const rect = section.getBoundingClientRect();
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        animated = true;
-        counters.forEach(counter => {
-          const updateCount = () => {
-            const target = +counter.getAttribute('data-count');
-            const current = +counter.innerText.replace(/\D/g, '') || 0;
-            const increment = target / 100;
-
-            if (current < target) {
-              counter.innerText = target >= 1000 ? '$' + Math.ceil(current + increment).toLocaleString() : Math.ceil(current + increment);
-              setTimeout(updateCount, 20);
-            } else {
-              counter.innerText = target >= 1000 ? '$' + target.toLocaleString() : target;
-            }
-          };
-          updateCount();
-        });
-      }
+<!-- Scripts for Events & Blogs -->
+<script>
+  // Animate Impact Counts
+  const counters = document.querySelectorAll('[data-count]');
+  let animated = false;
+  function animateCounts() {
+    if (animated) return;
+    const section = document.querySelector('#impact');
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+      animated = true;
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-count');
+          const current = +counter.innerText.replace(/\D/g, '') || 0;
+          const increment = target / 100;
+          if (current < target) {
+            counter.innerText = target >= 1000 ? '$' + Math.ceil(current + increment).toLocaleString() : Math.ceil(current + increment);
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target >= 1000 ? '$' + target.toLocaleString() : target;
+          }
+        };
+        updateCount();
+      });
     }
+  }
+  window.addEventListener('scroll', animateCounts);
+</script>
 
-    window.addEventListener('scroll', animateCounts);
-  </script>
+<script>
+  // Events Preview
+  fetch('events.json')
+    .then(res => res.json())
+    .then(events => {
+      const container = document.getElementById("homeUpcomingEvents");
+      const today = new Date();
+      const upcoming = events
+        .filter(e => new Date(e.endDate) >= today)
+        .sort((a, b) => new Date(a.startDate) - new Date(b.startDate))
+        .slice(0, 2);
+
+      const formatDate = date =>
+        new Date(date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+
+      upcoming.forEach(event => {
+        const div = document.createElement("div");
+        div.className = "bg-white p-6 rounded shadow text-left";
+        div.innerHTML = `
+          <h3 class="text-xl font-heading text-primary mb-2">${event.title}</h3>
+          <p class="text-gray-600 mb-1"><strong>Date:</strong> ${formatDate(event.startDate)}</p>
+          <p class="text-gray-600 mb-2"><strong>Location:</strong> ${event.location}</p>
+          <p class="text-gray-700 mb-3">${event.description}</p>
+          <a href="${event.url}" class="text-primary hover:underline">${event.cta} →</a>
+        `;
+        container.appendChild(div);
+      });
+    });
+</script>
+
+<script>
+  // Blog Preview
+  fetch('blogs.json')
+    .then(res => res.json())
+    .then(blogs => {
+      const container = document.getElementById("homeBlogContainer");
+      blogs.slice(0, 3).forEach(blog => {
+        const div = document.createElement("div");
+        div.className = "bg-white rounded-lg shadow hover:shadow-md transition overflow-hidden";
+        div.innerHTML = `
+          <img src="${blog.image}" alt="${blog.title}" class="w-full h-48 object-cover" />
+          <div class="p-5">
+            <a href="blog.html?id=${blog.id}" class="text-xl font-semibold text-primary hover:underline flex justify-between">
+              <span>${blog.title}</span><span>→</span>
+            </a>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    });
+</script>
+
 </body>
 </html>
