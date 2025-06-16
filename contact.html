@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | CardiKind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+            heading: ['Playfair Display', 'serif']
+          },
+          colors: {
+            primary: '#ff6b00',
+            softgray: '#f4f4f4',
+            lightgray: '#cccccc'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-softgray text-gray-900">
+
+  <!-- Navigation -->
+  <header class="flex items-center justify-between px-6 py-3 bg-lightgray">
+    <div class="flex items-center space-x-4">
+      <img src="images/logo.png" alt="CardiKind Logo" class="h-16 w-auto" />
+    </div>
+    <nav class="space-x-4 text-md font-medium flex items-center font-heading">
+      <a href="about.html" class="px-4 py-2 rounded hover:bg-primary/20">About Us</a>
+      <a href="events.html" class="px-4 py-2 rounded hover:bg-primary/20">Events</a>
+      <a href="resources.html" class="px-4 py-2 rounded hover:bg-primary/20">Resources</a>
+      <a href="blogs.html" class="px-4 py-2 rounded hover:bg-primary/20">Blogs</a>
+      <a href="contact.html" class="ml-4 bg-primary text-white px-4 py-2 rounded shadow hover:bg-orange-600 transition">Contact Us</a>
+    </nav>
+  </header>
+
+  <!-- Contact Header -->
+  <section class="bg-white py-20 px-6 text-center">
+    <h1 class="text-5xl font-bold text-primary font-heading mb-4">Contact Us</h1>
+    <p class="text-lg max-w-2xl mx-auto text-gray-700">Have questions, ideas, or want to collaborate? We’d love to hear from you. Fill out the form or reach out directly!</p>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="max-w-6xl mx-auto px-6 py-16 grid lg:grid-cols-3 gap-12 bg-white">
+
+    <!-- Contact Info and Map -->
+    <div class="col-span-1 space-y-8">
+
+      <div class="bg-softgray p-6 rounded-lg shadow">
+        <h3 class="text-2xl font-heading font-bold text-primary mb-4">Email Us</h3>
+        <p class="text-lg break-all"><a href="mailto:hello@cardikind.org" class="text-primary hover:underline">hello@cardikind.org</a></p>
+      </div>
+
+      <div class="bg-softgray p-6 rounded-lg shadow">
+        <h3 class="text-2xl font-heading font-bold text-primary mb-4">Our Location</h3>
+        <p class="text-lg">Los Altos, CA 94022</p>
+      </div>
+
+      <div class="rounded-lg overflow-hidden shadow">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12685.933504458444!2d-122.1162!3d37.3796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0b92faac46f%3A0xe70a62b7e4042723!2sLos%20Altos%2C%20CA%2094022!5e0!3m2!1sen!2sus!4v1718579000000" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="lg:col-span-2 bg-softgray p-8 rounded-lg shadow">
+      <form action="https://formsubmit.co/hello@cardikind.org" method="POST" class="space-y-6">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://cardikind.org/thank-you.html">
+
+        <div>
+          <label for="name" class="block font-bold text-lg mb-2">Name</label>
+          <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+        </div>
+
+        <div>
+          <label for="email" class="block font-bold text-lg mb-2">Email</label>
+          <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary">
+        </div>
+
+        <div>
+          <label for="message" class="block font-bold text-lg mb-2">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+        </div>
+
+        <button type="submit" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition font-semibold text-lg">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+
+</body>
+</html>

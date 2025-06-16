@@ -49,11 +49,20 @@
   <section class="py-20 px-6 bg-white text-gray-800">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 class="text-4xl font-bold mb-6 text-primary font-heading">Our Story</h2>
-        <p class="text-lg leading-relaxed">CardiKind was founded with a singular mission: to combat the silent epidemic of heart disease through education, community outreach, and support services. Our journey began with a small team of passionate individuals and has grown into a global initiative, reaching thousands with the tools and knowledge to protect their hearts.</p>
-      </div>
+  <h2 class="text-4xl font-bold mb-6 text-primary font-heading">Our Story</h2>
+  <p class="text-lg leading-relaxed">
+    CardiKind began in late 2024, sparked by a simple but powerful realization. While conducting extensive research into various forms of heart disease, our founder, Aiden Chavda, noticed a troubling pattern: despite being the leading cause of death globally, cardiovascular disease received far less attention than it deserved. The science was clear, the impact was undeniable—yet awareness remained strikingly low.
+  </p>
+  <p class="text-lg leading-relaxed mt-4">
+    What started as a small personal project quickly grew into something more. Aiden saw that by bridging the gap between medical knowledge and public understanding, real change was possible. With that belief, CardiKind was born—not just as a platform to share facts, but as a movement to spark conversations, shift perspectives, and bring heart health to the forefront of public consciousness.
+  </p>
+  <p class="text-lg leading-relaxed mt-4">
+    Today, CardiKind stands as a nonprofit committed to raising awareness about heart disease through education, outreach, and community-driven initiatives. What began with a single idea has become a growing organization with a bold vision: to change the way the world sees heart disease—and, eventually, to change the world itself.
+  </p>
+</div>
+
       <div>
-        <img src="https://via.placeholder.com/600x400?text=Our+Team" alt="Our Team" class="rounded-lg shadow-lg">
+        <img src="images/founder.jpg" alt="Our Team" class="rounded-lg shadow-lg">
       </div>
     </div>
   </section>
@@ -72,17 +81,18 @@
     </div>
   </section>
 
-  <!-- Contact CTA -->
-  <section id="contact" class="py-16 text-center bg-lightgray border-t border-gray-300">
-    <h3 class="text-3xl font-bold mb-4 text-gray-800 font-heading">Want to Get Involved?</h3>
-    <p class="mb-6 text-lg text-gray-700">Reach out to us to learn how you can be part of the CardiKind movement.</p>
-    <a href="mailto:info@cardikind.org" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">Contact Us</a>
-  </section>
+<div id="footer-placeholder"></div>
 
-  <!-- Footer -->
-  <footer class="bg-lightgray text-gray-600 py-6 text-center text-sm">
-    <p>&copy; 2025 CardiKind. All rights reserved.</p>
-  </footer>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+
+
 
 </body>
 </html>

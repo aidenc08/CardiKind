@@ -51,17 +51,16 @@
     <div id="blog-container" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto"></div>
   </section>
 
-  <!-- Contact CTA -->
-  <section id="contact" class="py-16 text-center bg-lightgray border-t border-gray-300">
-    <h3 class="text-3xl font-bold mb-4 text-gray-800 font-heading">Want to Contribute a Blog?</h3>
-    <p class="mb-6 text-lg text-gray-700">Share your story or insight with the CardiKind community.</p>
-    <a href="mailto:info@cardikind.org" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">Contact Us</a>
-  </section>
+<div id="footer-placeholder"></div>
 
-  <!-- Footer -->
-  <footer class="bg-lightgray text-gray-600 py-6 text-center text-sm">
-    <p>&copy; 2025 CardiKind. All rights reserved.</p>
-  </footer>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
 
   <script>
     fetch('blogs.json')
