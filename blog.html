@@ -26,29 +26,31 @@
 </head>
 <body class="bg-white text-gray-900 font-sans" onload="loadBlog()">
 
-  <!-- Navigation -->
-  <header class="flex items-center justify-between px-6 py-4 bg-lightgray">
-    <div class="flex items-center space-x-4">
-      <img src="images/logo.png" alt="CardiKind Logo" class="h-16 w-auto" />
-    </div>
-    <nav class="space-x-4 text-md font-medium flex items-center font-heading">
-      <a href="about.html" class="px-4 py-2 rounded hover:bg-primary/20">About Us</a>
-      <a href="events.html" class="px-4 py-2 rounded hover:bg-primary/20">Events</a>
-      <a href="resources.html" class="px-4 py-2 rounded hover:bg-primary/20">Resources</a>
-      <a href="blogs.html" class="px-4 py-2 rounded hover:bg-primary/20">Blogs</a>
-      <a href="#contact" class="ml-4 bg-primary text-white px-4 py-2 rounded shadow hover:bg-orange-600 transition">Learn More</a>
-    </nav>
-  </header>
+<div id="header-placeholder" class="min-h-[80px]"></div>
+
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
 
   <!-- Blog Title -->
   <section class="max-w-4xl mx-auto px-6 pt-16 pb-4 text-center">
     <h1 id="blog-title" class="text-4xl md:text-5xl font-heading text-primary font-bold leading-tight"></h1>
   </section>
 
-  <!-- Banner Image -->
-  <section class="w-full">
-    <img id="blog-image" alt="Blog Banner" class="w-full h-[28rem] object-cover" />
-  </section>
+<!-- Top Image -->
+<section class="w-full">
+  <img id="blog-image" alt="Blog Image" class="w-full max-h-[400px] object-contain mx-auto" />
+</section>
+
+<!-- Author Line -->
+<section class="text-center mt-2 mb-6">
+  <p class="text-base text-gray-600 italic">By: The CardiKind Team</p>
+</section>
+
 
   <!-- Blog Content -->
   <main class="max-w-3xl mx-auto px-6 py-16 text-lg text-gray-800 leading-relaxed">
@@ -61,10 +63,15 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-lightgray text-gray-600 py-6 text-center text-sm">
-    <p>&copy; 2025 CardiKind. All rights reserved.</p>
-  </footer>
+<div id="footer-placeholder" class="min-h-[200px]"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
 
   <script>
     async function loadBlog() {

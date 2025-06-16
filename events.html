@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CardiKind | Events</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+            heading: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            primary: '#ff6b00',
+            softgray: '#f4f4f4',
+            lightgray: '#cccccc',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-softgray text-gray-900 font-sans">
+
+<div id="header-placeholder" class="min-h-[80px]"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
+  </header>
+
+  <!-- Page Header -->
+  <section class="text-center py-12 bg-white">
+    <h2 class="text-4xl font-heading font-bold text-primary mb-4">Events</h2>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto">Explore past and upcoming heart health events hosted or supported by CardiKind.</p>
+  </section>
+
+  <!-- Event Sections -->
+  <section class="px-6 py-12">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-2xl font-heading text-primary mb-6">Upcoming Events</h3>
+      <div id="upcomingEvents" class="space-y-10 mb-16"></div>
+
+      <h3 class="text-2xl font-heading text-primary mb-6">Past Events</h3>
+      <div id="pastEvents" class="space-y-10"></div>
+    </div>
+  </section>
+
+<div id="footer-placeholder" class="min-h-[200px]"></div>
+
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
+  <!-- Load Events from JSON -->
+<script>
+  const upcomingContainer = document.getElementById("upcomingEvents");
+  const pastContainer = document.getElementById("pastEvents");
+  const today = new Date();
+
+  fetch('events.json')
+    .then(res => res.json())
+    .then(events => {
+      events
+        .sort((a, b) => new Date(a.startDate) - new Date(b.startDate))
+        .forEach(event => {
+          const start = new Date(event.startDate);
+          const end = new Date(event.endDate);
+          const isPast = end < today;
+          const container = isPast ? pastContainer : upcomingContainer;
+
+          // Format logic
+          const options = { year: 'numeric', month: 'long', day: 'numeric' };
+          let dateDisplay = '';
+
+          if (
+            start.toDateString() === end.toDateString()
+          ) {
+            dateDisplay = start.toLocaleDateString(undefined, options);
+          } else {
+            const sameMonth = start.getMonth() === end.getMonth();
+            const sameYear = start.getFullYear() === end.getFullYear();
+
+            if (sameMonth && sameYear) {
+              dateDisplay = `${start.getDate()}–${end.getDate()} ${start.toLocaleDateString(undefined, { month: 'long', year: 'numeric' })}`;
+            } else if (sameYear) {
+              dateDisplay = `${start.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })} – ${end.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })}`;
+            } else {
+              dateDisplay = `${start.toLocaleDateString(undefined, options)} – ${end.toLocaleDateString(undefined, options)}`;
+            }
+          }
+
+          const card = document.createElement("div");
+          card.className = "bg-white p-6 rounded-lg shadow hover:shadow-md transition";
+
+          card.innerHTML = `
+            <div class="flex flex-col md:flex-row justify-between md:items-center mb-4">
+              <h3 class="text-2xl font-heading text-primary mb-2 md:mb-0">${event.title}</h3>
+              <span class="text-gray-600 text-lg">${dateDisplay}</span>
+            </div>
+            <p class="text-gray-700 mb-3">${event.description}</p>
+            <p class="text-sm text-gray-600">
+              <span class="font-semibold">Location:</span> ${event.location} · 
+              <a href="${event.url}" class="text-primary hover:underline">${event.cta} →</a>
+            </p>
+          `;
+          container.appendChild(card);
+        });
+    })
+    .catch(error => {
+      console.error("Failed to load events.json", error);
+      upcomingContainer.innerHTML = "<p class='text-gray-500'>Unable to load events.</p>";
+    });
+</script>
+
+</body>
+</html>
