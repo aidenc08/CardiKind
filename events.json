@@ -1,20 +1,155 @@
 [
   {
-    "title": "Community Heart Screening Day",
-    "startDate": "2025-07-20",
-    "endDate": "2025-07-20",
-    "location": "Atlanta, Georgia",
-    "description": "Free heart screenings and consultations hosted by CardiKind.",
-    "url": "#",
-    "cta": "Register Now"
+    "title": "CardiKind Information Webinar",
+    "startDate": "2024-11-03",
+    "endDate": "2024-11-03",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us For Access to the Slides!"
   },
   {
-    "title": "Heart Health Workshop for Teens",
-    "startDate": "2025-08-03",
+    "title": "CardiKind Information Webinar",
+    "startDate": "2024-12-01",
+    "endDate": "2024-12-01",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us For Access to the Slides!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-01-07",
+    "endDate": "2024-01-07",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us For Access to the Slides!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-02-04",
+    "endDate": "2024-02-04",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us For Access to the Slides!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-03-03",
+    "endDate": "2025-03-03",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us For Access to the Slides!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-04-07",
+    "endDate": "2024-04-07",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us For Access to the Slides!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-05-05",
+    "endDate": "2024-05-05",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us For Access to the Slides!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-06-02",
+    "endDate": "2025-06-02",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us For Access to the Slides!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-07-07",
+    "endDate": "2025-07-07",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us to Register!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-08-04",
     "endDate": "2025-08-04",
-    "location": "Los Angeles, California",
-    "description": "Interactive session for teens on heart health and wellness.",
-    "url": "#",
-    "cta": "Register Now"
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us to Register!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-09-01",
+    "endDate": "2025-09-01",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us to Register!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-10-06",
+    "endDate": "2025-10-06",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us to Register!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-11-03",
+    "endDate": "2025-11-03",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us to Register!"
+  },
+  {
+    "title": "CardiKind Information Webinar",
+    "startDate": "2025-12-01",
+    "endDate": "2025-12-01",
+    "location": "Virtual",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "url": "cardikind.org/contact",
+    "cta": "Email Us to Register!"
+  },
+  {
+    "title": "SAHC Telethon",
+    "startDate": "2024-12-01",
+    "endDate": "2024-12-31",
+    "location": "Virtual",
+    "description": "CardiKind Assists in the Annual South Asian Heart Center Telethon!",
+    "url": "https://southasianheartcenter.org/donate-now",
+    "cta": "Donate Now!"
+  },
+  {
+    "title": "SAHC Telethon",
+    "startDate": "2025-12-01",
+    "endDate": "2025-12-31",
+    "location": "Virtual",
+    "description": "CardiKind Assists in the Annual South Asian Heart Center Telethon!",
+    "url": "https://southasianheartcenter.org/donate-now",
+    "cta": "Donate Now!"
+  },
+  {
+    "title": "AHA Telethon",
+    "startDate": "2025-05-01",
+    "endDate": "2025-05-01",
+    "location": "Virtual",
+    "description": "CardiKind Will be Assisting With the American Heart Assocation Telethon!",
+    "url": "https://www.wrdw.com/2025/04/21/finding-solutions-american-heart-association-telethon-supports-cpr-training/",
+    "cta": "Donate Now!"
   }
 ]
