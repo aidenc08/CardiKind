@@ -154,9 +154,30 @@
 
 <!-- Scripts for Events & Blogs -->
 <script>
-  // Animate Impact Counts
   const counters = document.querySelectorAll('[data-count]');
   let animated = false;
+
+  function updateCount(counter) {
+    const target = +counter.getAttribute('data-count');
+    const type = counter.getAttribute('data-type') || '';
+    const current = +counter.innerText.replace(/\D/g, '') || 0;
+    const increment = Math.ceil(target / 100);
+
+    if (current < target) {
+      const value = Math.min(current + increment, target);
+      counter.innerText =
+        type === 'money'
+          ? '$' + value.toLocaleString() + '+'
+          : value.toLocaleString() + (type === 'people' ? '+' : '');
+      setTimeout(() => updateCount(counter), 20);
+    } else {
+      counter.innerText =
+        type === 'money'
+          ? '$' + target.toLocaleString() + '+'
+          : target.toLocaleString() + (type === 'people' ? '+' : '');
+    }
+  }
+
   function animateCounts() {
     if (animated) return;
     const section = document.querySelector('#impact');
@@ -164,33 +185,14 @@
     if (rect.top <= window.innerHeight && rect.bottom >= 0) {
       animated = true;
       counters.forEach(counter => {
-        const updateCount = (counter) => {
-          const target = +counter.getAttribute('data-count');
-          const type = counter.getAttribute('data-type') || '';
-          const current = +counter.innerText.replace(/\D/g, '') || 0;
-          const increment = Math.ceil(target / 100);
-
-          if (current < target) {
-            const value = Math.min(current + increment, target);
-            counter.innerText =
-              type === 'money'
-                ? '$' + value.toLocaleString() + '+'
-                : value.toLocaleString() + (type === 'people' ? '+' : '');
-            setTimeout(() => updateCount(counter), 20);
-          } else {
-            counter.innerText =
-              type === 'money'
-                ? '$' + target.toLocaleString() + '+'
-                : target.toLocaleString() + (type === 'people' ? '+' : '');
-          }
-        };
-
-        updateCount();
+        updateCount(counter);
       });
     }
   }
+
   window.addEventListener('scroll', animateCounts);
 </script>
+
 
 <script>
   // Events Preview
