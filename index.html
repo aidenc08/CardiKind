@@ -57,16 +57,26 @@
 </script>
 
 <!-- Hero Section -->
-<section class="bg-orange-100 px-6 py-20 text-center md:text-left grid md:grid-cols-2 gap-8 items-center">
-  <div>
-    <h1 class="text-5xl font-heading text-primary font-bold mb-6">Empowering Communities<br /> Through Heart Health</h1>
-    <p class="text-lg text-gray-800 mb-6">CardiKind raises awareness, educates the public, and connects communities affected by heart disease through compassionate action and impactful programs.</p>
-    <a href="#impact" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">See Our Impact</a>
-  </div>
-  <div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROyr_rarQmdm8FY2gqzF3rcdf2VJjmwU9NPw&s" alt="Hero visual" class="rounded-lg shadow-lg mx-auto" />
+<section class="bg-orange-100 px-6 py-20">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div class="text-center md:text-left">
+      <h1 class="text-5xl font-heading text-primary font-bold mb-6 leading-tight">
+        Empowering Communities<br />
+        Through Heart Health
+      </h1>
+      <p class="text-lg text-gray-800 mb-6 max-w-xl mx-auto md:mx-0">
+        CardiKind raises awareness, educates the public, and connects communities affected by heart disease through compassionate action and impactful programs.
+      </p>
+      <a href="#impact" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">
+        See Our Impact
+      </a>
+    </div>
+    <div class="flex justify-center md:justify-end">
+      <img src="https://via.placeholder.com/600x450?text=Hero+Image" alt="Hero visual" class="rounded-lg shadow-lg max-w-full h-auto" />
+    </div>
   </div>
 </section>
+
 
 <!-- Mission Section -->
 <section class="bg-white py-20 px-6 text-center">
@@ -86,11 +96,11 @@
   <h2 class="text-3xl font-bold text-primary mb-10 font-heading">Our Global Impact</h2>
   <div class="grid gap-10 md:grid-cols-4 max-w-6xl mx-auto">
     <div>
-      <h3 class="text-5xl font-bold text-orange-600 animate-count" data-count="5400">$0+</h3>
+      <h3 class="text-5xl font-bold text-orange-600 animate-count" data-count="5400" data-type="money">$0+</h3>
       <p class="mt-2 text-gray-700">Raised for awareness efforts</p>
     </div>
     <div>
-      <h3 class="text-5xl font-bold text-teal-600 animate-count" data-count="21000">0+</h3>
+      <h3 class="text-5xl font-bold text-teal-600 animate-count" data-count="21000" data-type="people">0+</h3>
       <p class="mt-2 text-gray-700">People Reached</p>
     </div>
     <div>
@@ -146,17 +156,27 @@
     if (rect.top <= window.innerHeight && rect.bottom >= 0) {
       animated = true;
       counters.forEach(counter => {
-        const updateCount = () => {
+        const updateCount = (counter) => {
           const target = +counter.getAttribute('data-count');
+          const type = counter.getAttribute('data-type') || '';
           const current = +counter.innerText.replace(/\D/g, '') || 0;
-          const increment = target / 100;
+          const increment = Math.ceil(target / 100);
+
           if (current < target) {
-            counter.innerText = target >= 1000 ? '$' + Math.ceil(current + increment).toLocaleString() : Math.ceil(current + increment);
-            setTimeout(updateCount, 20);
+            const value = Math.min(current + increment, target);
+            counter.innerText =
+              type === 'money'
+                ? '$' + value.toLocaleString() + '+'
+                : value.toLocaleString() + (type === 'people' ? '+' : '');
+            setTimeout(() => updateCount(counter), 20);
           } else {
-            counter.innerText = target >= 1000 ? '$' + target.toLocaleString() : target;
+            counter.innerText =
+              type === 'money'
+                ? '$' + target.toLocaleString() + '+'
+                : target.toLocaleString() + (type === 'people' ? '+' : '');
           }
         };
+
         updateCount();
       });
     }
