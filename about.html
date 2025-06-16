@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | CardiKind</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+            heading: ['Playfair Display', 'serif']
+          },
+          colors: {
+            primary: '#ff6b00',
+            softgray: '#f4f4f4',
+            lightgray: '#cccccc'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-softgray text-gray-900">
+
+  <!-- Navigation -->
+  <header class="flex items-center justify-between px-6 py-3 bg-lightgray">
+    <div class="flex items-center space-x-4">
+      <img src="images/logo.png" alt="CardiKind Logo" class="h-16 w-auto" />
+    </div>
+    <nav class="space-x-4 text-md font-medium flex items-center font-heading">
+      <a href="about.html" class="px-4 py-2 rounded hover:bg-primary/20">About Us</a>
+      <a href="events.html" class="px-4 py-2 rounded hover:bg-primary/20">Events</a>
+      <a href="resources.html" class="px-4 py-2 rounded hover:bg-primary/20">Resources</a>
+      <a href="blogs.html" class="px-4 py-2 rounded hover:bg-primary/20">Blogs</a>
+      <a href="#contact" class="ml-4 bg-primary text-white px-4 py-2 rounded shadow hover:bg-orange-600 transition">Learn More</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="py-20 px-6 bg-white text-gray-800">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="text-4xl font-bold mb-6 text-primary font-heading">Our Story</h2>
+        <p class="text-lg leading-relaxed">CardiKind was founded with a singular mission: to combat the silent epidemic of heart disease through education, community outreach, and support services. Our journey began with a small team of passionate individuals and has grown into a global initiative, reaching thousands with the tools and knowledge to protect their hearts.</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/600x400?text=Our+Team" alt="Our Team" class="rounded-lg shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission and Vision -->
+  <section class="bg-orange-50 py-20 px-6 text-gray-900">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+      <div>
+        <h3 class="text-3xl font-bold text-primary mb-4 font-heading">Our Mission</h3>
+        <p class="text-lg">To reduce preventable cardiovascular diseases through community-driven education, empowerment, and action.</p>
+      </div>
+      <div>
+        <h3 class="text-3xl font-bold text-primary mb-4 font-heading">Our Vision</h3>
+        <p class="text-lg">A world where heart health knowledge is universal, support is accessible, and every heartbeat is protected.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="py-16 text-center bg-lightgray border-t border-gray-300">
+    <h3 class="text-3xl font-bold mb-4 text-gray-800 font-heading">Want to Get Involved?</h3>
+    <p class="mb-6 text-lg text-gray-700">Reach out to us to learn how you can be part of the CardiKind movement.</p>
+    <a href="mailto:info@cardikind.org" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-lightgray text-gray-600 py-6 text-center text-sm">
+    <p>&copy; 2025 CardiKind. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

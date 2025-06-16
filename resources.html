@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CardiKind | Resources</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+            heading: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            primary: '#ff6b00',
+            softgray: '#f4f4f4',
+            lightgray: '#cccccc',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-softgray text-gray-900 font-sans">
+
+  <!-- Navigation -->
+  <header class="flex items-center justify-between px-6 py-4 bg-lightgray">
+    <div class="flex items-center space-x-4">
+      <img src="images/logo.png" alt="CardiKind Logo" class="h-16 w-auto" />
+    </div>
+    <nav class="space-x-4 text-md font-medium flex items-center font-heading">
+      <a href="about.html" class="px-4 py-2 rounded hover:bg-primary/20">About Us</a>
+      <a href="events.html" class="px-4 py-2 rounded hover:bg-primary/20">Events</a>
+      <a href="resources.html" class="px-4 py-2 rounded hover:bg-primary/20">Resources</a>
+      <a href="blogs.html" class="px-4 py-2 rounded hover:bg-primary/20">Blogs</a>
+      <a href="#contact" class="ml-4 bg-primary text-white px-4 py-2 rounded shadow hover:bg-orange-600 transition">Learn More</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="text-center py-12 bg-white">
+    <h2 class="text-4xl font-heading font-bold text-primary mb-4">Explore Heart Health Organizations</h2>
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto">Browse our global directory of trusted heart health organizations and foundations.</p>
+  </section>
+
+  <!-- Search Field -->
+  <section class="px-6 py-6 bg-orange-50">
+    <div class="max-w-xl mx-auto">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search organizations by name or city..."
+        class="w-full p-3 border border-lightgray rounded-md text-lg focus:outline-none focus:ring-2 focus:ring-primary"
+        aria-label="Search organizations"
+      />
+    </div>
+  </section>
+
+  <!-- Resource Cards -->
+  <section class="px-6 pb-20">
+    <div id="orgList" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <!-- JS will render cards here -->
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="py-16 text-center bg-lightgray border-t border-gray-300">
+    <h3 class="text-3xl font-bold mb-4 text-gray-800 font-heading">Know a Resource We Should Add?</h3>
+    <p class="mb-6 text-lg text-gray-700">We’re always looking to expand. Suggest an organization or partner with us.</p>
+    <a href="mailto:info@cardikind.org" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-lightgray text-gray-600 py-6 text-center text-sm">
+    <p>&copy; 2025 CardiKind. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Embedded JSON data
+    const orgs = [
+      {
+    "name": "American Heart Association",
+    "url": "https://www.heart.org",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/American_Heart_Association_logo.svg",
+    "city": "Dallas, Texas, USA"
+  },
+  {
+    "name": "British Heart Foundation",
+    "url": "https://www.bhf.org.uk",
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/43/British_Heart_Foundation_logo.svg",
+    "city": "London, England"
+  },
+  {
+    "name": "Heart Foundation (Australia)",
+    "url": "https://www.heartfoundation.org.au",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/0a/Heart_Foundation_logo.svg/2560px-Heart_Foundation_logo.svg.png",
+    "city": "Melbourne, Australia"
+  },
+  {
+    "name": "Canadian Heart and Stroke Foundation",
+    "url": "https://www.heartandstroke.ca",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Heart_and_Stroke_Foundation_of_Canada_logo.svg/2560px-Heart_and_Stroke_Foundation_of_Canada_logo.svg.png",
+    "city": "Ottawa, Ontario, Canada"
+  },
+  {
+    "name": "Indian Heart Association",
+    "url": "http://www.indianheartassociation.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a1/Indian_Heart_Association_logo.png",
+    "city": "Hyderabad, India"
+  },
+  {
+    "name": "South Asian Heart Center",
+    "url": "https://www.sahc.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/40/South_Asian_Heart_Center_Logo.png",
+    "city": "Mountain View, California, USA"
+  },
+  {
+    "name": "European Society of Cardiology",
+    "url": "https://www.escardio.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/60/European_Society_of_Cardiology_logo.svg",
+    "city": "Sophia Antipolis, France"
+  },
+  {
+    "name": "World Heart Federation",
+    "url": "https://www.world-heart-federation.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/3/35/World_Heart_Federation_logo.svg/2560px-World_Heart_Federation_logo.svg.png",
+    "city": "Geneva, Switzerland"
+  },
+  {
+    "name": "American College of Cardiology",
+    "url": "https://www.acc.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e0/American_College_of_Cardiology_logo.svg",
+    "city": "Washington, D.C., USA"
+  },
+  {
+    "name": "Children’s Heart Foundation",
+    "url": "https://www.childrensheartfoundation.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Childrens_Heart_Foundation_logo.svg/2560px-Childrens_Heart_Foundation_logo.svg.png",
+    "city": "Chicago, Illinois, USA"
+  },
+  {
+    "name": "WomenHeart: The National Coalition for Women with Heart Disease",
+    "url": "https://www.womenheart.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/0/03/WomenHeart_logo.png",
+    "city": "Washington, D.C., USA"
+  },
+  {
+    "name": "Mended Hearts",
+    "url": "https://www.mendedhearts.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e4/Mended_Hearts_logo.png",
+    "city": "Dallas, Texas, USA"
+  },
+  {
+    "name": "American Society for Preventive Cardiology",
+    "url": "https://www.aspconline.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/f4/American_Society_for_Preventive_Cardiology_logo.png",
+    "city": "Kingwood, Texas, USA"
+  },
+  {
+    "name": "United OneHeart Foundation",
+    "url": "https://www.oneheartfoundation.org",
+    "image": "https://oneheartfoundation.org/images/logo.png",
+    "city": "Bangalore, India"
+  },
+  {
+    "name": "Children’s Cardiomyopathy Foundation",
+    "url": "https://www.childrenscardiomyopathy.org",
+    "image": "https://childrenscardiomyopathy.org/wp-content/uploads/2017/03/CCF-Logo-RGB.png",
+    "city": "Tenafly, New Jersey, USA"
+  },
+  {
+    "name": "Save a Child’s Heart",
+    "url": "https://www.saveachildsheart.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Save_a_Child%27s_Heart_Logo.png/800px-Save_a_Child%27s_Heart_Logo.png",
+    "city": "Holon, Israel"
+  },
+  {
+    "name": "National Stroke Association",
+    "url": "https://www.stroke.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5e/National_Stroke_Association_logo.png/800px-National_Stroke_Association_logo.png",
+    "city": "Denver, Colorado, USA"
+  },
+  {
+    "name": "Heart and Stroke Foundation of South Africa",
+    "url": "https://www.heartfoundation.co.za",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/6a/Heart_and_Stroke_Foundation_of_South_Africa_logo.png",
+    "city": "Cape Town, South Africa"
+  },
+  {
+    "name": "Heart Foundation New Zealand",
+    "url": "https://www.heartfoundation.org.nz",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f1/Heart_Foundation_New_Zealand_logo.png/800px-Heart_Foundation_New_Zealand_logo.png",
+    "city": "Auckland, New Zealand"
+  },
+  {
+    "name": "Cardiovascular Research Foundation",
+    "url": "https://www.crf.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/f2/Cardiovascular_Research_Foundation_logo.png",
+    "city": "New York, New York, USA"
+  },
+  {
+    "name": "European Heart Network",
+    "url": "https://www.ehnheart.org",
+    "image": "https://www.ehnheart.org/wp-content/uploads/2020/02/EHN_logo.png",
+    "city": "Brussels, Belgium"
+  },
+  {
+    "name": "World Health Organization – Cardiovascular Disease",
+    "url": "https://www.who.int/cardiovascular_diseases",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/WHO_logo.svg/1200px-WHO_logo.svg.png",
+    "city": "Geneva, Switzerland"
+  },
+  {
+    "name": "American Heart Association – Go Red for Women",
+    "url": "https://www.goredforwomen.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/85/Go_Red_for_Women_logo.png",
+    "city": "Dallas, Texas, USA"
+  },
+  {
+    "name": "National Heart, Lung, and Blood Institute",
+    "url": "https://www.nhlbi.nih.gov",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/NHLBI_logo.svg/800px-NHLBI_logo.svg.png",
+    "city": "Bethesda, Maryland, USA"
+  },
+  {
+    "name": "American Diabetes Association",
+    "url": "https://www.diabetes.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/thumb/2/21/American_Diabetes_Association_logo.svg/800px-American_Diabetes_Association_logo.svg.png",
+    "city": "Arlington, Virginia, USA"
+  },
+  {
+    "name": "National Institute for Health and Care Excellence",
+    "url": "https://www.nice.org.uk",
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/19/NICE_logo.svg",
+    "city": "Manchester, England"
+  },
+  {
+    "name": "American College of Preventive Medicine",
+    "url": "https://www.acpm.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/69/American_College_of_Preventive_Medicine_logo.png",
+    "city": "Washington, D.C., USA"
+  },
+  {
+    "name": "CardioSmart",
+    "url": "https://www.cardiosmart.org",
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/9f/CardioSmart_logo.png",
+    "city": "Washington, D.C., USA"
+  }
+    ];
+
+    const orgList = document.getElementById('orgList');
+    const searchInput = document.getElementById('searchInput');
+
+    function renderList(filter = '') {
+      const filteredOrgs = orgs.filter(org =>
+        org.name.toLowerCase().includes(filter.toLowerCase()) ||
+        org.city.toLowerCase().includes(filter.toLowerCase())
+      );
+
+      if (filteredOrgs.length === 0) {
+        orgList.innerHTML = '<p class="text-center text-gray-500 col-span-full">No organizations found.</p>';
+        return;
+      }
+
+      orgList.innerHTML = filteredOrgs.map(org => `
+        <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center hover:shadow-md transition">
+          <img src="${org.image}" alt="${org.name} logo" class="w-full h-24 object-contain mb-4" loading="lazy" />
+          <a href="${org.url}" target="_blank" rel="noopener noreferrer" class="text-lg font-semibold text-primary hover:underline mb-1">${org.name}</a>
+          <p class="text-sm text-gray-600">${org.city}</p>
+        </div>
+      `).join('');
+    }
+
+    searchInput.addEventListener('input', e => renderList(e.target.value));
+    renderList();
+  </script>
+</body>
+</html>

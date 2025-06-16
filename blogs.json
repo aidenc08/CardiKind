@@ -1,0 +1,54 @@
+[
+  {
+    "id": "1",
+    "title": "The Hidden Threat: How Heart Disease Silently Strikes",
+    "image": "images/blog_silent.jpg",
+    "paragraphs": [
+      "Heart disease is often called the “silent killer” — it progresses without any noticeable warning signs until it’s too late. Conditions like high blood pressure, elevated cholesterol, and clogged arteries can build up over years with no chest pain or discomfort, affecting more than half of U.S. adults without awareness :contentReference[oaicite:1]{index=1}.",
+      "Every year, around 805,000 Americans experience a heart attack — and approximately 170,000 of these are “silent” heart attacks, which go unnoticed as classic symptoms are missing :contentReference[oaicite:2]{index=2}.",
+      "Silent heart attacks can still cause lasting damage. Studies show these “mini-infarctions” increase the 10-year mortality risk to nearly the same level as symptomatic heart attacks (about 49–51%) :contentReference[oaicite:3]{index=3}.",
+      "Without warning, these silent events can lead to heart failure, arrhythmias, or even sudden death — emphasizing why regular check-ups, routine ECGs, and blood pressure monitoring are essential.",
+      "The stealthy nature of heart disease means we can’t wait for symptoms. Awareness, lifestyle changes, and early intervention are vital to shifting the balance in our favor."
+    ],
+    "references": [
+      "American Heart Association: ~170,000 silent heart attacks per year among 805,000 total U.S. heart attacks",
+      "Harvard Health: about 45% of heart attacks are silent",
+      "NHLBI: 10‑year mortality for silent heart attacks ≈ recognized attacks"
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Why We Still Underestimate Heart Disease—and What That Costs Us",
+    "image": "images/blog_awareness.jpg",
+    "paragraphs": [
+      "It’s hard to believe, but despite claiming more lives than any other disease globally, heart disease remains under-recognized. In a 2023 Harris Poll commissioned by the American Heart Association, only 49% of U.S. adults were aware that heart disease is the leading cause of death — meaning over half are unaware or misinformed :contentReference[oaicite:4]{index=4}.",
+      "Each year, cardiovascular disease claims nearly 943,000 American lives, more than cancer and accidents combined. Nearly half of all adults—around 48.6%—have some form of cardiovascular disease, and about 46.7% have hypertension. Yet, alarmingly, 38% of those with high blood pressure don’t even know it :contentReference[oaicite:5]{index=5}.",
+      "This knowledge gap has serious consequences. When people underestimate the danger, they’re less likely to support funding, advocate for better care, or pursue early screening. Misallocations in public health investments and lack of urgency in primary prevention can happen as a result.",
+      "Even among healthcare decision-makers, only 57% recognize heart disease as the top killer — indicating misinformation isn’t confined to the general population :contentReference[oaicite:6]{index=6}.",
+      "Changing this starts with clear communication, better education, and community outreach. We must bridge the gap between the facts and public perception so that heart disease gets the attention it deserves."
+    ],
+    "references": [
+      "AHA Harris Poll 2023: only 49% knew heart disease was leading cause",
+      "AHA 2024 Heart Statistics: ~943,000 deaths/year; 46.7% adults with hypertension; 38% unaware",
+      "Hello Heart survey: only 57% of decision‑makers recognized heart disease as top killer"
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Fueling the Fight: How Research and Awareness Can Defeat Heart Disease",
+    "image": "images/blog_funding.jpg",
+    "paragraphs": [
+      "Over the past half-century, research and public awareness have slashed cardiovascular mortality by nearly 70% in the U.S., proving what’s possible when science meets funding :contentReference[oaicite:7]{index=7}.",
+      "Institutions like the National Heart, Lung, and Blood Institute (NHLBI) and American Heart Association’s Go Red for Women campaign are at the forefront, investigating genetics, personalized therapy, and advanced diagnostics, even integrating AI for better early detection :contentReference[oaicite:8]{index=8}.",
+      "Community-based interventions offer enormous returns. A single dollar spent on blood pressure screenings in underserved communities can yield up to $16 in healthcare savings — and potentially save nearly a million lives annually :contentReference[oaicite:9]{index=9}.",
+      "But research alone isn't enough. Public advocacy drives policy change, increases funding, and motivates people to get screened and treated. Awareness campaigns like Go Red for Women, Smokefree initiatives, and hypertension education are critical.",
+      "When the public is informed and motivated, and funding is backed by evidence-based research, we get breakthroughs: cholesterol-lowering medications, minimally invasive procedures, cardiac imaging — all products of this powerful synergy.",
+      "We stand at a crossroads: continue the momentum, or risk stagnation. By supporting funding, spreading awareness, and engaging in community action, we can accelerate toward a future where heart disease is no longer our biggest threat."
+    ],
+    "references": [
+      "AHA & NHLBI: ~70% drop in cardiovascular deaths over 50 years",
+      "World Heart Federation / WHO: º90% of CVD is preventable",
+      "Time/Circulation study: silent myocardial infarctions triple mortality risk"
+    ]
+  }
+]

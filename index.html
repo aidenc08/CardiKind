@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CardiKind | Raising Awareness for Heart Disease</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Nunito', 'sans-serif'],
+            heading: ['Playfair Display', 'serif']
+          },
+          colors: {
+            primary: '#ff6b00',
+            softgray: '#f4f4f4',
+            lightgray: '#cccccc'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+    .animate-count {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-softgray text-gray-900 font-sans">
+
+  <!-- Navigation -->
+  <header class="flex items-center justify-between px-6 py-3 bg-lightgray">
+    <div class="flex items-center space-x-4">
+      <img src="images/logo.png" alt="CardiKind Logo" class="h-16 w-auto" />
+    </div>
+    <nav class="space-x-4 text-md font-medium flex items-center font-heading">
+      <a href="about.html" class="px-4 py-2 rounded hover:bg-primary/20">About Us</a>
+      <a href="events.html" class="px-4 py-2 rounded hover:bg-primary/20">Events</a>
+      <a href="resources.html" class="px-4 py-2 rounded hover:bg-primary/20">Resources</a>
+      <a href="blogs.html" class="px-4 py-2 rounded hover:bg-primary/20">Blogs</a>
+      <a href="#contact" class="ml-4 bg-primary text-white px-4 py-2 rounded shadow hover:bg-orange-600 transition">Learn More</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh] bg-[url('https://www.transparenttextures.com/patterns/asfalt-light.png')] bg-repeat bg-[length:80px_80px] bg-orange-100 px-6 py-16">
+    <div class="flex flex-col justify-center text-left">
+      <h2 class="text-5xl font-bold text-primary mb-4 font-heading">Empowering Heart Health</h2>
+      <p class="text-lg mb-6 max-w-md text-gray-800">CardiKind spreads awareness, education, and support for individuals affected by heart disease through outreach, advocacy, and community-led programs.</p>
+    </div>
+    <div class="flex justify-center items-center">
+      <img src="https://via.placeholder.com/500x400?text=Heart+Graphic" alt="Heart Awareness" class="rounded-lg shadow-lg">
+    </div>
+  </section>
+
+  <!-- Mission Statement -->
+  <section id="about" class="py-20 px-6 bg-white text-center text-gray-800">
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-3xl font-bold text-primary mb-6 font-heading">Our Mission</h3>
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="https://via.placeholder.com/400x300" alt="Mission" class="rounded-lg shadow-md mx-auto" />
+        <p class="text-lg leading-relaxed">Our mission is to educate, empower, and elevate awareness around heart disease. Through strategic partnerships, grassroots campaigns, and accessible resources, we aim to reduce preventable cardiovascular conditions and create a more informed global community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="py-20 px-6 text-center bg-orange-50 text-gray-900">
+    <h3 class="text-3xl font-bold text-primary mb-10 font-heading">Our Global Impact</h3>
+    <div class="grid gap-10 md:grid-cols-4 max-w-6xl mx-auto">
+      <div>
+        <h4 class="text-5xl font-bold text-orange-600 animate-count" data-count="500000">$0</h4>
+        <p class="mt-2 text-gray-700">Raised for awareness efforts</p>
+      </div>
+      <div>
+        <h4 class="text-5xl font-bold text-teal-600 animate-count" data-count="1000000">0</h4>
+        <p class="mt-2 text-gray-700">People Reached</p>
+      </div>
+      <div>
+        <h4 class="text-5xl font-bold text-blue-600 animate-count" data-count="35">0</h4>
+        <p class="mt-2 text-gray-700">Countries Impacted</p>
+      </div>
+      <div>
+        <h4 class="text-5xl font-bold text-pink-600 animate-count" data-count="250">0</h4>
+        <p class="mt-2 text-gray-700">Volunteers Mobilized</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="py-16 text-center bg-lightgray border-t border-gray-300">
+    <h3 class="text-3xl font-bold mb-4 text-gray-800 font-heading">Let's Make a Difference Together</h3>
+    <p class="mb-6 text-lg text-gray-700">Have ideas or want to help the mission? We’d love to connect.</p>
+    <a href="mailto:info@cardikind.org" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-lightgray text-gray-600 py-6 text-center text-sm">
+    <p>&copy; 2025 CardiKind. All rights reserved.</p>
+  </footer>
+
+  <!-- Count Animation Script -->
+  <script>
+    const counters = document.querySelectorAll('[data-count]');
+    let animated = false;
+
+    function animateCounts() {
+      if (animated) return;
+      const impactSection = document.querySelector('#impact');
+      const rect = impactSection.getBoundingClientRect();
+      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+        animated = true;
+        counters.forEach(counter => {
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-count');
+            const current = +counter.innerText.replace(/\D/g, '') || 0;
+            const increment = target / 100;
+
+            if (current < target) {
+              counter.innerText = target >= 1000 ? '$' + Math.ceil(current + increment).toLocaleString() : Math.ceil(current + increment);
+              setTimeout(updateCount, 20);
+            } else {
+              counter.innerText = target >= 1000 ? '$' + target.toLocaleString() : target;
+            }
+          }
+          updateCount();
+        });
+      }
+    }
+
+    window.addEventListener('scroll', animateCounts);
+  </script>
+</body>
+</html>
