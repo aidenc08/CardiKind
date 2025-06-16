@@ -26,19 +26,15 @@
 </head>
 <body class="bg-softgray text-gray-900 font-sans">
 
-  <!-- Navigation -->
-  <header class="flex items-center justify-between px-6 py-4 bg-lightgray">
-    <div class="flex items-center space-x-4">
-      <img src="images/logo.png" alt="CardiKind Logo" class="h-16 w-auto" />
-    </div>
-    <nav class="space-x-4 text-md font-medium flex items-center font-heading">
-      <a href="about.html" class="px-4 py-2 rounded hover:bg-primary/20">About Us</a>
-      <a href="events.html" class="px-4 py-2 rounded hover:bg-primary/20">Events</a>
-      <a href="resources.html" class="px-4 py-2 rounded hover:bg-primary/20">Resources</a>
-      <a href="blogs.html" class="px-4 py-2 rounded hover:bg-primary/20">Blogs</a>
-      <a href="#contact" class="ml-4 bg-primary text-white px-4 py-2 rounded shadow hover:bg-orange-600 transition">Learn More</a>
-    </nav>
-  </header>
+<div id="header-placeholder"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
+</script>
+
 
   <!-- Page Header -->
   <section class="text-center py-12 bg-white">
