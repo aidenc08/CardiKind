@@ -28,6 +28,20 @@
     body {
       font-family: 'Nunito', sans-serif;
     }
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fadeInUp 1s ease-out both;
+  }
+
+  .delay-150 {
+    animation-delay: 0.15s;
+  }
+</style>
+
   </style>
 </head>
 <body class="bg-softgray text-gray-900 font-sans">
@@ -50,18 +64,22 @@
     <a href="#impact" class="bg-primary text-white px-6 py-3 rounded shadow hover:bg-orange-600 transition">See Our Impact</a>
   </div>
   <div>
-    <img src="https://via.placeholder.com/500x400?text=Hero+Image" alt="Hero visual" class="rounded-lg shadow-lg mx-auto" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROyr_rarQmdm8FY2gqzF3rcdf2VJjmwU9NPw&s" alt="Hero visual" class="rounded-lg shadow-lg mx-auto" />
   </div>
 </section>
 
 <!-- Mission Section -->
 <section class="bg-white py-20 px-6 text-center">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold text-primary font-heading mb-6">Our Mission</h2>
-    <p class="text-lg text-gray-700 mb-10">To reduce the impact of heart disease by promoting healthy living, offering accessible resources, and fostering supportive communities globally.</p>
-    <img src="https://via.placeholder.com/800x300?text=Mission+Image" alt="Mission visual" class="mx-auto rounded-lg shadow" />
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-3xl font-bold text-primary font-heading mb-6 animate-fade-in">Our Mission</h2>
+    <p class="text-lg text-gray-700 leading-relaxed animate-fade-in delay-150">
+      At <span class="text-primary font-semibold">CardiKind</span>, we are committed to <span class="text-orange-500 font-bold">reducing the impact of heart disease</span> by
+      promoting <span class="text-teal-600 font-semibold">healthy living</span>, delivering <span class="text-pink-600 font-semibold">accessible resources</span>, and
+      cultivating <span class="text-blue-600 font-semibold">supportive communities</span> around the world.
+    </p>
   </div>
 </section>
+
 
 <!-- Our Impact Section -->
 <section id="impact" class="py-20 px-6 text-center bg-orange-50 text-gray-900">
