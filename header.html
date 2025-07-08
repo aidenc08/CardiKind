@@ -36,20 +36,18 @@
   </nav>
 </header>
 
-<main class="p-6">
-  <p>This is page content to test gap below header.</p>
-</main>
-
 <script>
   const toggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('nav-menu');
   toggle.addEventListener('click', () => {
     if (menu.classList.contains('hidden')) {
       menu.classList.remove('hidden');
-      menu.classList.add('flex');
+      menu.classList.toggle('hidden');
+
     } else {
       menu.classList.add('hidden');
-      menu.classList.remove('flex');
+      menu.classList.toggle('hidden');
+
     }
   });
 </script>
