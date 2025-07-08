@@ -78,8 +78,8 @@
       const pastEvents = [];
 
       events.forEach(event => {
-        const start = new Date(event.startDate);
-        const end = new Date(event.endDate);
+        const start = new Date(`${event.startDate}T00:00:00-07:00`); // force PST/PDT
+        const end = new Date(`${event.endDate}T00:00:00-07:00`);
         const isPast = end < today;
         (isPast ? pastEvents : upcomingEvents).push({ ...event, start, end });
       });
