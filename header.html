@@ -1,52 +1,21 @@
-<header class="bg-lightgray px-4 py-3 w-full">
+<header class="flex items-center justify-between px-6 py-3 bg-lightgray">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<div class="flex items-center space-x-4">
+  <a href="/" class="flex items-center space-x-2">
+    <img src="images/logo.png" alt="CardiKind Logo" class="h-16 w-auto md:h-20" />
+    <h1 class="text-3xl md:text-4xl font-bold tracking-wide" style="font-family: 'Playfair Display', serif;">
+      <span class="text-black">Cardi</span><span class="text-teal-600">Kind</span>
+    </h1>
+  </a>
+</div>
 
-  <div class="flex items-center justify-between">
-    <!-- Logo -->
-    <a href="/" class="flex items-center space-x-2">
-      <img src="images/logo.png" alt="CardiKind Logo" class="h-12 w-auto md:h-16" />
-      <h1 class="text-2xl md:text-4xl font-bold tracking-wide" style="font-family: 'Playfair Display', serif;">
-        <span class="text-black">Cardi</span><span class="text-teal-600">Kind</span>
-      </h1>
-    </a>
 
-    <!-- Hamburger button -->
-    <button id="menu-toggle" class="md:hidden text-black focus:outline-none" aria-label="Toggle navigation">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
-           viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex space-x-4 text-base font-medium font-heading">
-      <a href="about" class="px-3 py-2 rounded hover:bg-primary/20 transition">About Us</a>
-      <a href="events" class="px-3 py-2 rounded hover:bg-primary/20 transition">Events</a>
-      <a href="resources" class="px-3 py-2 rounded hover:bg-primary/20 transition">Resources</a>
-      <a href="blogs" class="px-3 py-2 rounded hover:bg-primary/20 transition">Blogs</a>
-      <a href="contact" class="ml-4 bg-primary text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition">Learn More</a>
-    </nav>
-  </div>
-
-  <!-- Mobile Nav -->
-  <div id="mobile-menu" class="hidden md:hidden mt-3 space-y-2 text-base font-medium font-heading">
-    <a href="about" class="block px-4 py-2 rounded hover:bg-primary/20 transition">About Us</a>
-    <a href="events" class="block px-4 py-2 rounded hover:bg-primary/20 transition">Events</a>
-    <a href="resources" class="block px-4 py-2 rounded hover:bg-primary/20 transition">Resources</a>
-    <a href="blogs" class="block px-4 py-2 rounded hover:bg-primary/20 transition">Blogs</a>
-    <a href="contact" class="block bg-primary text-white px-4 py-2 rounded shadow hover:bg-orange-600 transition">Learn More</a>
-  </div>
-
-  <!-- Inline script to ensure hamburger works when injected -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.getElementById('mobile-menu');
-      if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-          menu.classList.toggle('hidden');
-        });
-      }
-    });
-  </script>
+  <nav class="space-x-4 text-lg font-medium flex items-center font-heading">
+    <a href="about" class="px-4 py-2 rounded hover:bg-primary/20 transition">About Us</a>
+    <a href="events" class="px-4 py-2 rounded hover:bg-primary/20 transition">Events</a>
+    <a href="resources" class="px-4 py-2 rounded hover:bg-primary/20 transition">Resources</a>
+    <a href="blogs" class="px-4 py-2 rounded hover:bg-primary/20 transition">Blogs</a>
+    <a href="contact" class="ml-4 bg-primary text-white px-5 py-2 rounded shadow hover:bg-orange-600 transition">Learn More</a>
+  </nav>
 </header>

@@ -49,13 +49,11 @@
 <!-- Header Include -->
 <div id="header-placeholder" class="min-h-[80px]"></div>
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    fetch("header.html")
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("header-placeholder").innerHTML = data;
-      });
-  });
+  fetch("header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    });
 </script>
 
 <!-- Hero Section -->
