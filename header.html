@@ -1,17 +1,24 @@
-<header class="flex items-center justify-between px-6 py-3 bg-lightgray relative">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <title>CardiKind</title>
+</head>
+<body class="m-0">
 
+<header class="relative bg-lightgray px-6 py-3 flex items-center justify-between">
   <!-- Logo -->
-  <div class="flex items-center space-x-2">
-    <a href="/" class="flex items-center space-x-2">
-      <img src="images/logo.png" alt="CardiKind Logo" class="h-12 w-auto md:h-16" />
-      <h1 class="text-2xl md:text-3xl font-bold tracking-wide" style="font-family: 'Playfair Display', serif;">
-        <span class="text-black">Cardi</span><span class="text-teal-600">Kind</span>
-      </h1>
-    </a>
-  </div>
+  <a href="/" class="flex items-center space-x-2">
+    <img src="images/logo.png" alt="CardiKind Logo" class="h-12 w-auto md:h-16" />
+    <h1 class="text-2xl md:text-3xl font-bold tracking-wide" style="font-family: 'Playfair Display', serif;">
+      <span class="text-black">Cardi</span><span class="text-teal-600">Kind</span>
+    </h1>
+  </a>
 
-  <!-- Mobile menu button -->
+  <!-- Hamburger -->
   <button id="menu-toggle" class="md:hidden focus:outline-none">
     <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -19,27 +26,33 @@
     </svg>
   </button>
 
-  <!-- Nav links -->
-  <nav id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-4 w-full md:w-auto absolute md:static top-full left-0 bg-lightgray md:bg-transparent z-50">
-    <a href="about" class="block px-6 py-2 md:px-4 rounded hover:bg-primary/20 transition">About Us</a>
-    <a href="events" class="block px-6 py-2 md:px-4 rounded hover:bg-primary/20 transition">Events</a>
-    <a href="resources" class="block px-6 py-2 md:px-4 rounded hover:bg-primary/20 transition">Resources</a>
-    <a href="blogs" class="block px-6 py-2 md:px-4 rounded hover:bg-primary/20 transition">Blogs</a>
-    <a href="contact" class="block px-6 py-2 md:ml-4 bg-primary text-white rounded shadow hover:bg-orange-600 transition">Learn More</a>
+  <!-- Nav -->
+  <nav id="nav-menu" class="hidden flex-col absolute top-full left-0 w-full bg-lightgray md:static md:flex md:flex-row md:items-center md:space-x-4 md:w-auto">
+    <a href="about" class="block px-6 py-3 hover:bg-primary/20">About Us</a>
+    <a href="events" class="block px-6 py-3 hover:bg-primary/20">Events</a>
+    <a href="resources" class="block px-6 py-3 hover:bg-primary/20">Resources</a>
+    <a href="blogs" class="block px-6 py-3 hover:bg-primary/20">Blogs</a>
+    <a href="contact" class="block px-6 py-3 bg-primary text-white hover:bg-orange-600 md:ml-4 md:rounded md:shadow">Learn More</a>
   </nav>
-
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    menuToggle.addEventListener('click', () => {
-      if (navMenu.classList.contains('hidden')) {
-        navMenu.classList.remove('hidden');
-        navMenu.classList.add('flex', 'flex-col');
-      } else {
-        navMenu.classList.add('hidden');
-        navMenu.classList.remove('flex', 'flex-col');
-      }
-    });
-  </script>
 </header>
+
+<main class="p-6">
+  <p>This is page content to test gap below header.</p>
+</main>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('nav-menu');
+  toggle.addEventListener('click', () => {
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+      menu.classList.add('flex');
+    } else {
+      menu.classList.add('hidden');
+      menu.classList.remove('flex');
+    }
+  });
+</script>
+
+</body>
+</html>
