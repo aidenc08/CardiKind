@@ -38,22 +38,58 @@
 
   </header>
 
-  <!-- Page Header -->
-  <section class="text-center py-12 bg-white">
-    <h2 class="text-4xl font-heading font-bold text-primary mb-4">Events</h2>
-    <p class="text-lg text-gray-700 max-w-2xl mx-auto">Explore past and upcoming heart health events hosted or supported by CardiKind.</p>
-  </section>
+<!-- Page Header -->
+<section class="text-center py-12 bg-white">
+  <h2 class="text-4xl font-heading font-bold text-primary mb-4">Events</h2>
+  <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-6">Explore past and upcoming heart health events hosted or supported by CardiKind.</p>
 
-  <!-- Event Sections -->
-  <section class="px-6 py-12">
-    <div class="max-w-4xl mx-auto">
+  <!-- Toggle Buttons -->
+  <div class="flex justify-center space-x-4">
+    <button id="showUpcoming" class="px-4 py-2 bg-primary text-white rounded hover:bg-orange-700 transition">Upcoming Events</button>
+    <button id="showPast" class="px-4 py-2 bg-lightgray text-gray-800 rounded hover:bg-gray-400 transition">Past Events</button>
+  </div>
+</section>
+
+<!-- Event Sections -->
+<section class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div id="upcomingSection">
       <h3 class="text-2xl font-heading text-primary mb-6">Upcoming Events</h3>
       <div id="upcomingEvents" class="space-y-10 mb-16"></div>
+    </div>
 
+    <div id="pastSection" class="hidden">
       <h3 class="text-2xl font-heading text-primary mb-6">Past Events</h3>
       <div id="pastEvents" class="space-y-10"></div>
     </div>
-  </section>
+  </div>
+</section>
+
+<script>
+  const showUpcomingBtn = document.getElementById("showUpcoming");
+  const showPastBtn = document.getElementById("showPast");
+  const upcomingSection = document.getElementById("upcomingSection");
+  const pastSection = document.getElementById("pastSection");
+
+  showUpcomingBtn.addEventListener("click", () => {
+    upcomingSection.classList.remove("hidden");
+    pastSection.classList.add("hidden");
+    showUpcomingBtn.classList.add("bg-primary", "text-white");
+    showUpcomingBtn.classList.remove("bg-lightgray", "text-gray-800");
+    showPastBtn.classList.add("bg-lightgray", "text-gray-800");
+    showPastBtn.classList.remove("bg-primary", "text-white");
+  });
+
+  showPastBtn.addEventListener("click", () => {
+    pastSection.classList.remove("hidden");
+    upcomingSection.classList.add("hidden");
+    showPastBtn.classList.add("bg-primary", "text-white");
+    showPastBtn.classList.remove("bg-lightgray", "text-gray-800");
+    showUpcomingBtn.classList.add("bg-lightgray", "text-gray-800");
+    showUpcomingBtn.classList.remove("bg-primary", "text-white");
+  });
+</script>
+
 
 <div id="footer-placeholder" class="min-h-[200px]"></div>
 
