@@ -4,7 +4,7 @@
     "startDate": "2024-11-03",
     "endDate": "2024-11-03",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us For Access to the Slides!"
   },
@@ -13,7 +13,7 @@
     "startDate": "2024-12-01",
     "endDate": "2024-12-01",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us For Access to the Slides!"
   },
@@ -22,7 +22,7 @@
     "startDate": "2025-01-07",
     "endDate": "2025-01-07",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us For Access to the Slides!"
   },
@@ -31,7 +31,7 @@
     "startDate": "2025-02-04",
     "endDate": "2025-02-04",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us For Access to the Slides!"
   },
@@ -40,7 +40,7 @@
     "startDate": "2025-03-03",
     "endDate": "2025-03-03",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us For Access to the Slides!"
   },
@@ -49,7 +49,7 @@
     "startDate": "2025-04-07",
     "endDate": "2025-04-07",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us For Access to the Slides!"
   },
@@ -58,7 +58,7 @@
     "startDate": "2025-05-05",
     "endDate": "2025-05-05",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us For Access to the Slides!"
   },
@@ -67,7 +67,7 @@
     "startDate": "2025-06-02",
     "endDate": "2025-06-02",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us For Access to the Slides!"
   },
@@ -76,7 +76,7 @@
     "startDate": "2025-07-07",
     "endDate": "2025-07-07",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us to Register!"
   },
@@ -85,7 +85,7 @@
     "startDate": "2025-08-04",
     "endDate": "2025-08-04",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us to Register!"
   },
@@ -94,7 +94,7 @@
     "startDate": "2025-09-01",
     "endDate": "2025-09-01",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us to Register!"
   },
@@ -103,7 +103,7 @@
     "startDate": "2025-10-06",
     "endDate": "2025-10-06",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us to Register!"
   },
@@ -112,7 +112,7 @@
     "startDate": "2025-11-03",
     "endDate": "2025-11-03",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!",
     "url": "contact",
     "cta": "Email Us to Register!"
   },
@@ -121,7 +121,7 @@
     "startDate": "2025-12-01",
     "endDate": "2025-12-01",
     "location": "Virtual",
-    "description": "Monthly Webinar Introducing CardiKind and Our Goal",
+    "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!,
     "url": "contact",
     "cta": "Email Us to Register!"
   },
@@ -151,5 +151,78 @@
     "description": "CardiKind Will be Assisting With the American Heart Assocation Telethon!",
     "url": "https://www.wrdw.com/2025/04/21/finding-solutions-american-heart-association-telethon-supports-cpr-training/",
     "cta": "Donate Now!"
+  },
+  {
+    "title": "BHF Fundraiser",
+    "startDate": "2025-11-24",
+    "endDate": "2025-11-26",
+    "location": "Virtual",
+    "description": "CardiKind Will be Fundraising on Behalf of the British Heart Foundation!",
+    "url": "https://www.bhf.org.uk/how-you-can-help/donate/donation/reason-for-donating",
+    "cta": "Donate Now!"
+  }
+  ,
+  {
+      "title": "BHF Fundraiser",
+      "startDate": "2025-11-24",
+      "endDate": "2025-11-26",
+      "location": "Virtual",
+      "description": "CardiKind Will be Fundraising on Behalf of the British Heart Foundation!",
+      "url": "https://www.bhf.org.uk/how-you-can-help/donate/donation/reason-for-donating",
+      "cta": "Donate Now!"
+  },
+  {
+      "title": "CardiKind Information Webinar",
+      "startDate": "2026-01-03",
+      "endDate": "2026-01-03",
+      "location": "Virtual",
+      "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!,
+      "url": "contact",
+      "cta": "Email Us to Register!"
+  },
+  {
+      "title": "CardiKind Information Webinar",
+      "startDate": "2026-02-07",
+      "endDate": "2026-02-07",
+      "location": "Virtual",
+      "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!,
+      "url": "contact",
+      "cta": "Email Us to Register!"
+  },
+  {
+      "title": "CardiKind Information Webinar",
+      "startDate": "2026-03-07",
+      "endDate": "2026-03-07",
+      "location": "Virtual",
+      "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!,
+      "url": "contact",
+      "cta": "Email Us to Register!"
+  },
+  {
+      "title": "CardiKind Information Webinar",
+      "startDate": "2026-04-04",
+      "endDate": "2026-04-04",
+      "location": "Virtual",
+      "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!,
+      "url": "contact",
+      "cta": "Email Us to Register!"
+  },
+  {
+      "title": "CardiKind Information Webinar",
+      "startDate": "2026-05-02",
+      "endDate": "2026-05-02",
+      "location": "Virtual",
+      "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!,
+      "url": "contact",
+      "cta": "Email Us to Register!"
+  },
+  {
+      "title": "CardiKind Information Webinar",
+      "startDate": "2026-06-06",
+      "endDate": "2026-06-06",
+      "location": "Virtual",
+      "description": "Monthly Webinar Introducing CardiKind and Our Goal to New Members!,
+      "url": "contact",
+      "cta": "Email Us to Register!"
   }
 ]
